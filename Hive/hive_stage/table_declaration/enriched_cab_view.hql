@@ -1,0 +1,1 @@
+create view if not exists processed_data.cab_view as select substring(split(split(INPUT__FILE__NAME,'[/]')[8],'[.]')[0],7 ) as cab_name, * from processed_data.cab_data;
